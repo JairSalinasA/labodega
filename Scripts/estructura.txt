@@ -1,0 +1,44 @@
+Para el sistema "La Bodega", basado en la arquitectura tradicional en capas, POO, DDD, PEAA, validaciones, login, notificaciones, y utilizando C# Windows Forms, ADO.NET y SQL Server, la estructura de carpetas debe ser modular, organizada y fácil de mantener. A continuación, te presento una estructura de carpetas completa y detallada:
+
+LaBodega/
+│
+├── LaBodega.sln                          // Solución del proyecto
+│
+├── LaBodega.Application/                 // Capa de Aplicación
+│   ├── DTOs/                             // Objetos de Transferencia de Datos (DTOs)
+│   ├── Mappings/                         // Mapeos (AutoMapper)
+│   ├── Services/                         // Servicios de aplicación
+│   └── Validators/                       // Validaciones de datos (FluentValidation)
+│
+├── LaBodega.Common/                      // Utilidades comunes
+│   ├── Constants/                        // Constantes de la aplicación
+│   ├── Extensions/                       // Extensiones de métodos
+│   ├── Helpers/                          // Utilidades comunes
+│   │   ├── AppConfig.cs                  // Configuración de la aplicación
+│   │   └── HashHelper.cs                 // Utilidad para hashing
+│   └── Logging/                          // Manejo de logs
+│
+├── LaBodega.Data/                        // Capa de Datos
+│   ├── Database/                         // Configuración de la base de datos
+│   ├── Helpers/                          // Utilidades de base de datos
+│   │   └── DatabaseHelper.cs             // Ayudante para operaciones de base de datos
+│   ├── Models/                           // Modelos de datos (entidades)
+│   └── Repositories/                     // Implementaciones de repositorios
+│       └── UsuarioRepository.cs          // Repositorio de usuarios
+│
+├── LaBodega.Domain/                      // Capa de Dominio
+│   ├── Entities/                         // Entidades del dominio
+│   │   └── Usuario.cs                    // Entidad Usuario
+│   ├── Exceptions/                       // Excepciones personalizadas
+│   ├── Repositories/                     // Interfaces de repositorios
+│   ├── Services/                         // Servicios de dominio
+│   ├── Specifications/                   // Especificaciones de negocio
+│   └── ValueObjects/                     // Objetos de valor
+│
+└── LaBodega.Presentation/                // Capa de Presentación (Windows Forms)
+    ├── Forms/                            // Formularios de la aplicación
+    │   └── LoginForm.cs                  // Formulario de login
+    ├── Controls/                         // Controles personalizados
+    ├── Resources/                        // Recursos (imágenes, iconos, etc.)
+    ├── Helpers/                          // Utilidades para la interfaz de usuario
+    └── Themes/                           // Temas y estilos de la interfaz
