@@ -168,6 +168,7 @@
     <Folder Include="Forms\ProductosForm\" />
     <Folder Include="Forms\ProveedoresForm\" />
     <Folder Include="Forms\VentasForm\" />
+    <Folder Include="NewFolder1\" />
     <Folder Include="Resources\Icons\" />
     <Folder Include="Resources\Styles\" />
   </ItemGroup>
